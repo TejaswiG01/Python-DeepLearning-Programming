@@ -14,7 +14,11 @@ for line in file:
         else:
             # add the word to count
             count[i] = 1
-
 # print contents of dictionary
 for key in list(count.keys()):
     print(key, ":", count[key])
+
+# saving the output to another file
+text = open("wc.txt", 'w')
+text.write(str(count))
+text.close()
